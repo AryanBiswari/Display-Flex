@@ -90,3 +90,27 @@
 //     console.log("some error");
 // })
 
+
+
+const loadScripts = (src) =>{
+    return new Promise(function(resolve, reject){
+        let script = document.createElement("script");
+        script.src = src;
+        document.body.appendChild(script);
+        script.onload = () =>{
+            resolve("script is loaded");
+        }
+        script.onerror=()=>{
+            reject(new Error("Couldn't load"));
+        }
+    })
+}
+
+let p1 = loadScripts("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js").then(function()
+{   console.log("first bundle loaded")
+    return loadScripts("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js")
+}).then(function(){
+    console.log("second bundle loaded");
+}).catch(function(err){
+    console.log(err);
+})
