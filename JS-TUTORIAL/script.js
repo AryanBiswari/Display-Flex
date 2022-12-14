@@ -218,3 +218,66 @@
 
 // try and catch is used to hhandle exceptions  or errors but if we get error in catch block then progem doesnot run 
 // but after finally it always runs
+
+
+// console.log(document.cookie);
+// document.cookie = "name=aryan";
+// document.cookie = "1=2";
+// document.cookie = "2=3";
+// // let prompt1 = prompt("Please enter a key");
+// // let prompt2 = prompt("Please enter a value");
+// document.cookie = `${encodeURIComponent(prompt1)} = ${encodeURIComponent(prompt2)}`;
+// // if user enter a special key and value then we use decodeURIComponent to decode it.
+// // console.log(decodeURIComponent(prompt1));
+// console.log(document.cookie);
+
+
+// let arr = [3,5];
+// let [a,b] = arr;
+// console.log(a,b);
+// let arr = [3,5];
+// let [a,b,c] = arr;
+// console.log(a,b,c); gives 3,5,undefined bcz value of c is not defined in arr
+
+// let arr = [3,5,9];
+// let [a,b,c] = arr;
+// console.log(a,b,c);
+
+
+// let arr = [3,5,10,11,12,13];
+// let [a,b,c,...rest] = arr;
+// console.log(a,b,c,rest); gives 3,5,10 in one array and remaining in another array
+
+
+// let arr = [3,5,8,9,0,7,5];
+// let [a,b,...r] = arr;
+// console.log(a,b,r); can use any variable instead of rest it means writing rest is not compulsory
+
+
+// let arr = [3,5,9,0,6,7,8];
+// let [a,b, , ,...rest] = arr;
+// console.log(a,b,rest); it skips 9 and 0 and remainig stores the rest array. a = 3,b=5,rest=[6,7,8]
+
+// let obj = {a: 1, b: 2, c: 3, d: 4, e: 5}
+// let {a,b,c,d,e} = obj;
+// console.log(a,b,c,d,e);
+
+
+// let arr1 = [1, 2, 3, 4, 5]
+// let obj1 = {...arr1}
+// console.log(obj1)
+
+// const sum = (a,b,c,d,e) =>{
+//     return a + b+c + d + e;
+// }
+// console.log(sum(...arr1));
+
+
+// let obj2 = {
+//     name:'aryan',
+//     class:'cs',
+//     read:'js'
+// };
+
+// console.log({...obj2, name:'raghav'});
+// console.log({name:'raghav',...obj2}); this will not change any values from obj2
